@@ -319,6 +319,10 @@ html {
   box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
 }
 
+.hover\:blur-sm:hover {
+  filter: blur(2px);
+}
+
 /* Scroll reveal animations */
 .scroll-reveal {
   opacity: 0;
@@ -330,3 +334,26 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Adding moving trail animations for gallery */
+@keyframes scroll-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-30.333%); } /* Adjust for 3 images at a time */
+}
+
+.animate-scroll-right {
+  animation: scroll-right 20s linear infinite;
+}
+
+.animate-scroll-right-slow {
+  animation: scroll-right 60s linear infinite;
+}
+
+/* Pause on hover */
+.animate-scroll-right:hover,
+.animate-scroll-right-slow:hover {
+  animation-play-state: paused;
+}
+
+/* Optional: resume when hover ends (default behavior) */
+

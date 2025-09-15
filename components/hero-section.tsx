@@ -36,7 +36,7 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in-up delay-400 px-2 sm:px-0">
           <Button
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover-lift animate-glow min-h-[48px]"
+            className="bg-primary hover:bg-primary text-primary-foreground px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg hover-lift animate-glow min-h-[48px]"
             onClick={() => scrollToSection("videos")}
           >
             <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
