@@ -47,17 +47,18 @@ export function GallerySection() {
   const videos = [
     {
       id: "1",
+      title: "Bollywood Night – Bhagirathi Puram, Dehradun",
+      src: "/IMG_3359.MP4",
+      description: "A nostalgic Bollywood performance filled with melodies and emotions.",
+    },
+    {
+      id: "2",
       title: "Sufi Rendition - Ishq Sufiyana",
       src: "/a.MP4",
       description:
         "A mesmerizing Sufi performance that touches the soul with spiritual melodies and traditional rhythms.",
-    },
-    {
-      id: "2",
-      title: "Bollywood Classic - Pal",
-      src: "/b.MP4",
-      description: "A heartfelt rendition of the beloved classic, bringing new emotions to timeless lyrics.",
-    },
+    }, 
+   
     {
       id: "3",
       title: "KK Tribute - Khuda Jaane",
@@ -72,9 +73,21 @@ export function GallerySection() {
     },
     {
       id: "5",
-      title: "Acoustic Session - Tum Hi Ho",
+      title: "Sufi Rendition – Kailash Kher Special",
       src: "/IMG_3352.MP4",
-      description: "An intimate acoustic performance that strips down the music to its emotional core.",
+      description: "A soulful performance inspired by Kailash Kher’s powerful Sufi style.",
+    },
+     {
+      id: "6",
+      title: "Rock Session – GMS Road, Dehradun",
+      src: "/b.MP4",
+      description: "A high-energy rock performance recorded live in Dehradun.",
+    },
+      {
+      id: "7",
+      title: "Devotional Vibes – Shiv Tandav",
+      src: "/IMG_3355.MP4",
+      description: "An energetic and divine rendition of the iconic Shiv Tandav Stotram.",
     },
   ]
 

@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Phone, Mail, MapPin, Calendar,MessageCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Calendar, MessageCircle, CheckCircle, AlertCircle } from "lucide-react"
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,10 +18,47 @@ export function ContactSection() {
     message: "",
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+    setIsLoading(true)
+    setSubmitStatus("idle")
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus("success")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          eventDate: "",
+          message: "",
+        })
+
+        if (result.mailtoLink) {
+          window.open(result.mailtoLink, "_blank")
+        }
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error("Form submission error:", error)
+      setSubmitStatus("error")
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -51,21 +88,21 @@ export function ContactSection() {
                 </div>
               </div>
               <a
-  href="https://wa.me/917310543093"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="flex items-center space-x-4 hover-lift"
->
-  <MessageCircle className="h-6 w-6 text-yellow-500 animate-pulse-slow" />
-  <div>
-    <p className="font-semibold">WhatsApp Me</p>
-  </div>
-</a>
+                href="https://wa.me/917310543093"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-4 hover-lift"
+              >
+                <MessageCircle className="h-6 w-6 text-yellow-500 animate-pulse-slow" />
+                <div>
+                  <p className="font-semibold">WhatsApp Me</p>
+                </div>
+              </a>
               <div className="flex items-center space-x-3 sm:space-x-4 hover-lift p-2 rounded-lg">
                 <Mail className="h-5 w-5 sm:h-6 sm:w-6 text-primary animate-pulse-slow flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-sm sm:text-base">Email</p>
-                  <p className="text-muted-foreground text-sm sm:text-base break-all">booking@mizaazi.com</p>
+                  <p className="text-muted-foreground text-sm sm:text-base break-all">manishkumarsingh8954@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 sm:space-x-4 hover-lift p-2 rounded-lg">
@@ -150,11 +187,25 @@ export function ContactSection() {
                   required
                   className="bg-input border-primary/20 focus:border-primary min-h-[100px] resize-none"
                 />
+                {submitStatus === "success" && (
+                   <div className="fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-md animate-fade-in">
+          Booking request sent successfully!
+        </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="flex items-center space-x-2 text-red-600 bg-red-50 p-3 rounded-lg">
+                    <AlertCircle className="h-5 w-5" />
+                    <p className="text-sm">Failed to send booking request. Please try again.</p>
+                  </div>
+                )}
+
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground hover-lift animate-glow min-h-[48px] text-base sm:text-lg"
+                  disabled={isLoading}
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground hover-lift animate-glow min-h-[48px] text-base sm:text-lg disabled:opacity-50"
                 >
-                  Send Booking Request
+                  {isLoading ? "Sending..." : "Send Booking Request"}
                 </Button>
               </form>
             </CardContent>

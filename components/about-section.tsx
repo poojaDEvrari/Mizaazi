@@ -91,7 +91,7 @@ export function AboutSection() {
   return (
     <section ref={sectionRef} id="about" className="py-16 sm:py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+      
           <div className="scroll-reveal order-2 lg:order-1">
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6">
               {animateHeading("🎤 Mizaazi – The Voice That Connects")}
@@ -127,7 +127,7 @@ export function AboutSection() {
           </div>
 
      
-        </div>
+       
       </div>
     </section>
   )
