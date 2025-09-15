@@ -47,11 +47,11 @@ export function ContactSection() {
                 <Phone className="h-5 w-5 sm:h-6 sm:w-6 text-primary animate-pulse-slow flex-shrink-0" />
                 <div>
                   <p className="font-semibold text-sm sm:text-base">Phone</p>
-                  <p className="text-muted-foreground text-sm sm:text-base">+91 98765 43210</p>
+                  <p className="text-muted-foreground text-sm sm:text-base">+91 73105 43093</p>
                 </div>
               </div>
               <a
-  href="https://wa.me/919876543210"
+  href="https://wa.me/917310543093"
   target="_blank"
   rel="noopener noreferrer"
   className="flex items-center space-x-4 hover-lift"

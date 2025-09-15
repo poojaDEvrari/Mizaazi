@@ -13,7 +13,7 @@ export function HeroSection() {
       {/* Background Video */}
       <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
         <source
-          src="/IMG_3352.mp4?height=1080&width=1920&query=musician performing on stage with dramatic lighting"
+          src="/IMG_3352.MP4?height=1080&width=1920&query=musician performing on stage with dramatic lighting"
           type="video/mp4"
         />
         Your browser does not support the video tag.

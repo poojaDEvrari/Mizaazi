@@ -11,18 +11,18 @@ export function GallerySection() {
 
   const photos = [
     { src: "/IMG_0609.jpg", alt: "Live Performance 1" },
-    { src: "/IMG_7641.jpg", alt: "Studio Session" },
+    { src: "/IMG_7641.JPG", alt: "Studio Session" },
     { src: "/IMG_2572.jpg", alt: "Outdoor Concert" },
-    { src: "/IMG_9177.png", alt: "KK Song Performance" },
-    { src: "/IMG_4720.jpg", alt: "My Performance" },
+    { src: "/IMG_9177.PNG", alt: "KK Song Performance" },
+    { src: "/IMG_4720.JPG", alt: "My Performance" },
   ]
 
   const videos = [
-    { id: "1", src: "/a.mp4" },
-    { id: "2", src: "/b.mp4" },
-    { id: "3", src: "/c.mp4" },
-    { id: "4", src: "/d.mp4" },
-    { id: "5", src: "/IMG_3352.mp4" },
+    { id: "1", src: "/a.MP4" },
+    { id: "2", src: "/b.MP4" },
+    { id: "3", src: "/c.MP4" },
+    { id: "4", src: "/d.MP4" },
+    { id: "5", src: "/IMG_3352.MP4" },
   ]
 
   return (
