@@ -2,8 +2,8 @@ import { Card } from "@/components/ui/card"
 
 export function AboutSection() {
   return (
-  <section id="about" className="py-16 sm:py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+  <section id="about" className="py-16 sm:py-20 px-4 from-gray-900 to-black">
+      <div className="max-w-6xl mx-auto from-gray-900 to-black">
       
           <div className="scroll-reveal order-2 lg:order-1">
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 sm:mb-6">🎤 About Me</h2>

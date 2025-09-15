@@ -7,6 +7,7 @@ import { AboutSection } from "@/components/about-section"
 import { GallerySection } from "@/components/gallery-section"
 import { GenresSection } from "@/components/genres-section"
 import { ContactSection } from "@/components/contact-section"
+import { SocialSection } from "@/components/social-section"
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(true)
@@ -43,6 +44,7 @@ export default function Home() {
       <AboutSection />
       <GallerySection />
       <GenresSection />
+      <SocialSection />
       <ContactSection />
     </main>
   )
