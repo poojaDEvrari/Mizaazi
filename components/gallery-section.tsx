@@ -140,7 +140,7 @@ export function GallerySection() {
                   className="relative group cursor-pointer aspect-video bg-black"
                   onClick={() => setSelectedVideo(video.src)}
                 >
-                  <video className="w-full h-full object-cover" muted preload="metadata">
+                  <video className="w-full h-full object-cover" muted autoPlay loop playsInline preload="metadata">
                     <source src={video.src} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
