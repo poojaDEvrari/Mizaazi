@@ -14,7 +14,7 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
     const timer = setTimeout(() => {
       setIsVisible(false)
       setTimeout(onComplete, 1000) // Wait for fade out animation
-    }, 3000)
+    }, 1200)
 
     return () => clearTimeout(timer)
   }, [onComplete])
@@ -30,14 +30,7 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
           <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-3 sm:mb-4 animate-splash-in">
             Mizaazi
           </h1>
-          <div className="flex justify-center space-x-1 mb-3 sm:mb-4">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className={`w-1 h-6 sm:h-8 bg-primary/60 animate-sound-wave delay-${i * 100}`} />
-            ))}
-          </div>
-          <p className="text-base sm:text-lg text-muted-foreground animate-fade-in-up delay-500">
-            Soulful Voice, Timeless Vibes
-          </p>
+          
         </div>
       </div>
     )
@@ -53,14 +46,7 @@ export function SplashScreen({ onComplete }: SplashScreenProps) {
         <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-bold text-primary mb-3 sm:mb-4 animate-splash-in">
           Mizaazi
         </h1>
-        <div className="flex justify-center space-x-1 mb-3 sm:mb-4">
-          {[...Array(5)].map((_, i) => (
-            <div key={i} className={`w-1 h-6 sm:h-8 bg-primary/60 animate-sound-wave delay-${i * 100}`} />
-          ))}
-        </div>
-        <p className="text-base sm:text-lg text-muted-foreground animate-fade-in-up delay-500">
-          Soulful Voice, Timeless Vibes
-        </p>
+        
       </div>
     </div>
   )
