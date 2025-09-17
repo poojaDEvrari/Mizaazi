@@ -51,25 +51,25 @@ export function GallerySection() {
       src: "/IMG_3359.MP4",
       description: "A nostalgic Bollywood performance filled with melodies and emotions.",
     },
-    {
+     {
       id: "2",
-      title: "Sufi Rendition - Ishq Sufiyana",
-      src: "/a.MP4",
-      description:
-        "A mesmerizing Sufi performance that touches the soul with spiritual melodies and traditional rhythms.",
-    }, 
+      title: "Rock Session – GMS Road, Dehradun",
+      src: "/b.MP4",
+      description: "A high-energy rock performance recorded live in Dehradun.",
+    },
+   
    
     {
       id: "3",
-      title: "KK Tribute - Khuda Jaane",
+      title: "Emotional Melody – Phly Bhi Main",
       src: "/c.MP4",
-      description: "A tribute to the legendary KK, capturing the essence of his unforgettable voice and style.",
+      description: "Performed by Mizaazi, this rendition flows with raw emotions and heartfelt depth. A song that beautifully mirrors love, vulnerability, and the essence of true feelings.",
     },
     {
       id: "4",
-      title: "Original Composition - Raah",
+      title: "Kaho Na Kaho – Bollywood Classic",
       src: "/d.MP4",
-      description: "An original composition showcasing Mizaazi's songwriting talent and unique musical vision.",
+      description: "Performed by Mizaazi in an open-air setting, this lively rendition carries a joyful and refreshing vibe, filling the atmosphere with happiness and timeless Bollywood charm.",
     },
     {
       id: "5",
@@ -79,10 +79,11 @@ export function GallerySection() {
     },
      {
       id: "6",
-      title: "Rock Session – GMS Road, Dehradun",
-      src: "/b.MP4",
-      description: "A high-energy rock performance recorded live in Dehradun.",
-    },
+      title: "Romantic Melody – Tum Na Ho To",
+      src: "/a.MP4",
+      description:
+        "A heartfelt romantic performance that captures emotions with soulful music and deep feelings.",
+    }, 
       {
       id: "7",
       title: "Devotional Vibes – Shiv Tandav",
@@ -139,7 +140,7 @@ export function GallerySection() {
         </div>
 
         {/* Video Gallery */}
-        <div>
+        <div id="videos">
           <h3 className="font-playfair text-xl sm:text-2xl font-semibold mb-6 sm:mb-8 text-center scroll-reveal delay-300">
             Video Performances
           </h3>

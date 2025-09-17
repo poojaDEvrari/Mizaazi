@@ -13,13 +13,23 @@ export function SocialSection() {
 
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <a
-            href="https://www.instagram.com/miz_aazi?igsh=MWU3a3AxZGhpdTcxYg=="
+            href="https://www.instagram.com/mizaaz_music_lover/"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl min-w-[200px] justify-center"
           >
             <Instagram className="w-6 h-6 group-hover:animate-pulse" />
-            <span className="font-semibold text-lg">Follow on Instagram</span>
+            <span className="font-semibold text-lg">Follow on mizaaz_music_lover</span>
+          </a>
+           <a
+            href="https://www.instagram.com/miz_aazi/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl min-w-[200px] justify-center"
+          >
+            <Instagram className="w-6 h-6 group-hover:animate-pulse" />
+            <span className="font-semibold text-lg">Follow on miz_aazi
+</span>
           </a>
 
           <a
